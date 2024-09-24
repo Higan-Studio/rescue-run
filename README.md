@@ -1,5 +1,5 @@
 # Rescue-Run
-Projeto do semestre 2024.2 blabla
+Projeto do semestre 2024.2
 ## Premissa
 Dois amigos são separados quando um deles é sequestrado. 
 Para resgatá-lo, o jogador precisa enfrentar de três a quatro mini-desafios inspirados em vegetalidades, cada um com obstáculos únicos.
