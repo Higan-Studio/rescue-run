@@ -12,10 +12,24 @@ Num mundo inspirado em vegetalidades, o jogo gira em torno dos acontecimentos so
 
 **Yuri:** Personagem principal com papel de heroi, sua missão se transforma em uma busca de vencer obstáculos e trazer paz para a alma dela. jovem profundo e intenso, canalizando dor em determinação
 ## regras do jogo
+- Movimentação: esquerda, direita (controle de deslizamento), ou botão de impulso para pular.
+
+
+- jogo multiplayer.
+
+- sistema de dano (jardim amaldiçoado) : ao pisar no quadrado falso o personagem será engolido.
+
+- sistema de dano (campo de espinho): desviar dos obstáculos e sobreviver.
+
+- não tem limite de tempo.
+
+- Os jogadores devem alternar entre turnos, cada um fazendo uma jogada por vez.
 
 ## referências
 - batalha naval
 - campo minado 
 - crossy road
 ## fontes de receita
+- propaganda
+
 
