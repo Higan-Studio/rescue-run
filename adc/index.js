@@ -1,8 +1,13 @@
 import config from './config.js'
-class Game extends Phaser.game {
-    consructor () {
-        super(config)
-    }
+import abertura from './abertura.js'
+import sala from './sala.js'
+
+class Game extends Phaser.Game {
+    constructor () {
+			super(config)
+			this.scene.add('abertura', abertura)
+			this.scene.start ('abertura')
+		}
 } 
 
 window.onload = () => {
