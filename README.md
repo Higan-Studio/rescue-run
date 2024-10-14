@@ -1,5 +1,9 @@
 # Rescue-Run
 Projeto do semestre 2024.2
+
+## jogo ideal
+inicialmente a primeira ideia do jogo seria com 2 personagens onde um tenta salvar o outro. durante o jogo, aquele que tentaria resgatar o outro passaria por uma série de desafios como um labirinto, atravessar terreno com obstáculos até chegar ao outro lado do mapa para resgatar o amigo
+
 ## Premissa
 Ao iniciar a busca pela sua amiga Astromélia, Lian tem de se aventurar sem querer em um mundo completamente diferente, explorando florestas encantadas e jardins secretos traiçoeiros, assim enfrentando desafios inspirados na flora mágica de Botânica. Enquanto busca pistas sobre o desaparecimento de Astromélia, Lian descobre que a amiga foi sequestrada por forças sombrias. Com a ajuda do espírito de Astromélia, que se manifesta em momentos críticos, eles juntos precisam superar desafios.
 
