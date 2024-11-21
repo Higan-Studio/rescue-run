@@ -228,7 +228,7 @@ Agora, suas histórias se entrelaçam em uma corrida contra o tempo, onde a habi
 
 </tw-passagedata><tw-passagedata pid="2" name="Quantidade de Jogadores" tags="" position="2400,475" size="100,100">Iniciar partida com: 
 
-digite a sala de partida: {text input for: &#39;sala&#39;}
+Gigite a sala de partida: {text input for: &#39;sala&#39;}
 
 &gt; [[1 jogador-&gt;solo]] 
 &gt; [[2 jogadores-&gt;dupla]]</tw-passagedata><tw-passagedata pid="3" name="Capa" tags="" position="2250,275" size="100,100">tempoDePartida: 10
@@ -238,7 +238,14 @@ tijolinhos: 500
 GoogleClientID: &#39;331191695151-ku8mdhd76pc2k36itas8lm722krn0u64.apps.googleusercontent.com&#39;
 --
 
-&gt; [[Apresentação]]</tw-passagedata><tw-passagedata pid="4" name="solo" tags="" position="2550,300" size="100,100">&gt;[[1 jogador-&gt;astromelia solo]]
+&gt; [[Apresentação]]
+
+[JavaScript]
+const audioObj = document.createElement(&#39;audio&#39;)
+audioObj.setAttribute(&#39;id&#39;, &#39;conversa&#39;)
+audioObj.setAttribute(&#39;autoplay&#39;, &#39;true&#39;)
+document.body.appendChild(audioObj)
+[continued]</tw-passagedata><tw-passagedata pid="4" name="solo" tags="" position="2550,300" size="100,100">&gt;[[1 jogador-&gt;astromelia solo]]
 &gt;[[1 jogador-&gt;liam solo]]
 </tw-passagedata><tw-passagedata pid="5" name="dupla" tags="" position="2600,575" size="100,100">--
 
