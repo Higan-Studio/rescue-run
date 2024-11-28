@@ -624,7 +624,8 @@ Digite a palavra-chave {text input for: &#39;sala&#39;}
 
 </tw-passagedata><tw-passagedata pid="49" name="Espera, um cadeado? " tags="" position="3125,2325" size="100,100">[align center]
 [[⚠️ PARABÉNS JOGADOR(A), VOCÊ CHEGOU NA FASE FINAL PARA CONSEGUIR LIBERTAR ASTROMÉLIA⚠️]]
-</tw-passagedata><tw-passagedata pid="50" name="Aperte caso tenha certeza de sua resposta" tags="" position="3400,3250" size="100,100">**VITÓRIA! A ASTROMÉLIA FOI RESGATADA ESTÁ SALVA E O VILÃO FOI DERROTADO E VAI PAGAR POR ISSO! AGORA É HORA DE CURTIR A FAMA DE HEROI. PARABÉNS PELA ÊXITO, VOCÊ FOI INCRÍVEL, E COMO RECOMPENSA, VOCÊ RECEBE: 1OO TIJOLINHOS!**
+</tw-passagedata><tw-passagedata pid="50" name="Aperte caso tenha certeza de sua resposta" tags="" position="3400,3250" size="100,100">[if lirio == &#39;lirio&#39;]
+**VITÓRIA! A ASTROMÉLIA FOI RESGATADA ESTÁ SALVA E O VILÃO FOI DERROTADO E VAI PAGAR POR ISSO! AGORA É HORA DE CURTIR A FAMA DE HEROI. PARABÉNS PELA ÊXITO, VOCÊ FOI INCRÍVEL, E COMO RECOMPENSA, VOCÊ RECEBE: 1OO TIJOLINHOS!**
 
 Faça o login no Google para adicionar TJL${tijolinhos} de crédito.
 
@@ -696,7 +697,9 @@ setup.loadScript(&#39;https://accounts.google.com/gsi/client&#39;, () =&gt; {
   })
 })
 [continued]
-</tw-passagedata><tw-passagedata pid="51" name="clique para continuar" tags="" position="2600,1800" size="100,100">Minha cabeça esta latejando.
+
+[else]
+Volte e [[tente de novo-&gt; 525]].</tw-passagedata><tw-passagedata pid="51" name="clique para continuar" tags="" position="2600,1800" size="100,100">Minha cabeça esta latejando.
 
 &gt;[[&quot;O que aconteceu?&quot;]]
 </tw-passagedata><tw-passagedata pid="52" name="Onde nós estamos?" tags="" position="2775,1475" size="100,100">Eu realmente não estava gostando do rumo das coisas, queria ir pra casa, mas uma coisa me chama atenção Vinc aponta para uma placa na barraca antes de lê-la para mim.
@@ -839,19 +842,17 @@ PARA CONTINUAR, VOCÊ E SEU PARCEIRO(A) DEVEM PROCURAR PELA BIBLIOTECA 3 NÚMERO
 &gt;[[487]]
 &gt;[[253]]
 
-</tw-passagedata><tw-passagedata pid="76" name="Escolher com calma as palavras para não assustar a Astro.." tags="" position="3575,3775" size="100,100">“Astro, eu preciso de mais um padrão dessa vez parece querer uma palavra ou algo assim, eu vou sair pra procurar e..”
-
-&gt;[[Ela me interrompe, e me diz que sabe o padrão, eu não boto muita fé. Mas não é como se eu tivesse mais de uma opção.]]</tw-passagedata><tw-passagedata pid="77" name="Ela me interrompe, e me diz que sabe o padrão, eu não boto muita fé. Mas não é como se eu tivesse mais de uma opção." tags="" position="3550,3575" size="100,100">pedir ajuda do prof com codigo; ao digitar a palavra errada a pessoa morre e ao digitar a certa ela vence, mas aclicando no mesmo botao &quot;aperte caso tenha certeza da resposta&quot;
---
-[align center]
+</tw-passagedata><tw-passagedata pid="76" name="Escolher com calma as palavras para não assustar a Astro.." tags="" position="3450,3800" size="100,100">“Astro, eu preciso de mais um padrão dessa vez parece querer uma palavra ou algo assim, eu vou sair pra procurar e..”
+&gt;[[Ela me interrompe, e me diz que sabe o padrão, eu não boto muita fé. Mas não é como se eu tivesse mais de uma opção.]]
+</tw-passagedata><tw-passagedata pid="77" name="Ela me interrompe, e me diz que sabe o padrão, eu não boto muita fé. Mas não é como se eu tivesse mais de uma opção." tags="" position="3550,3575" size="100,100">[align center]
 ⚠️ PARA CONTINUAR, VOCÊ DEVE FORMULAR UMA PALAVRA COM AS LETRAS QUE ASTROMÉLIA CONSEGUIU VER DENTRO DA SALA. BOA SORTE.⚠️
 
 Dica: É uma flor
 
-Digite a palavra-chave: {text input for: &#39;palavra&#39;}
+Digite a palavra-chave: {text input for: &#39;lirio&#39;}
 
 [[Aperte caso tenha certeza de sua resposta]]
-</tw-passagedata><tw-passagedata pid="78" name="aperte para continuar " tags="" position="3625,3275" size="100,100">PARA CONTINUAR, VOCÊ E SEU PARCEIRO(A) DEVEM PROCURAR PELA BIBLIOTECA 3 NÚMEROS, E APERTAR JUNTOS O BOTÃO QUE CORRESPONDE A SEQUÊNCIA CERTA PARA PODER PROSSEGUIR.
+</tw-passagedata><tw-passagedata pid="78" name="aperte para continuar " tags="" position="3575,3350" size="100,100">PARA CONTINUAR, VOCÊ E SEU PARCEIRO(A) DEVEM PROCURAR PELA BIBLIOTECA 3 NÚMEROS, E APERTAR JUNTOS O BOTÃO QUE CORRESPONDE A SEQUÊNCIA CERTA PARA PODER PROSSEGUIR.
 
 &gt;[[ 178]]
 &gt;[[ 527]]
