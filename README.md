@@ -1,11 +1,8 @@
 # Rescue-Run
 Projeto do semestre 2024.2
 
-## jogo ideal
-inicialmente a primeira ideia do jogo seria com 2 personagens onde um tenta salvar o outro. durante o jogo, aquele que tentaria resgatar o outro passaria por uma série de desafios como um labirinto, atravessar terreno com obstáculos até chegar ao outro lado do mapa para resgatar o amigo
-
 ## Premissa
-Ao iniciar a busca pela sua amiga Astromélia, Lian tem de se aventurar sem querer em um mundo completamente diferente, explorando florestas encantadas e jardins secretos traiçoeiros, assim enfrentando desafios inspirados na flora mágica de Botânica. Enquanto busca pistas sobre o desaparecimento de Astromélia, Lian descobre que a amiga foi sequestrada por forças sombrias. Com a ajuda do espírito de Astromélia, que se manifesta em momentos críticos, eles juntos precisam superar desafios.
+Ao iniciar a busca pela sua amiga Astromélia, Lian tem de se aventurar sem querer em um mundo completamente diferente, explorando lugares secretos e traiçoeiros, assim enfrentando desafios inspirados na flora mágica de Botânia. Lian descobre que a amiga foi sequestrada por alguem e enquanto busca pistas sobre o desaparecimento de Astromélia, com a ajuda de pistas,dicas e intuições, Liam deve correr contra o tempo para resgatar sua melhor amiga.
 
 Conseguirá Lian resgatar Astromélia antes que seja tarde demais?
 
@@ -18,9 +15,10 @@ Mundo fantasia: Um ambiente totalmente inventado onde as plantas têm habilidade
 ## Personagens
 **Astromélia:** Após sua morte, como um fantasma, ela assumiria o papel de guia e protetora. Uma garota vibrante e cheia de vida, fazendo amizades facilmente, até de forma descuidada e perigosa pra ela mesma.
 
-**Vinc carni:** Esse personagem assume o papel de vilão,essencial para o desenrolar da morte da Astromélia. Homem astuto e manipulador, se considera superior e tem uma visão distorcida do que é necessário para sobreviver no mundo.
+**Vinc:** Esse personagem assume o papel de vilão,essencial para o desenrolar da morte da Astromélia. Homem astuto e manipulador, se considera superior e tem uma visão distorcida do que é necessário para sobreviver no mundo.
 
 **Lian:** Personagem principal com papel de herói, sua missão se transforma em uma busca de vencer obstáculos e trazer paz para a alma dela. jovem profundo e intenso, canalizando dor em determinação.
+
 ## Regras do jogo
 - Movimentação: esquerda, direita (controle de deslizamento) ou botão de impulso para pular.
 
