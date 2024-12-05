@@ -483,7 +483,14 @@ Uau, não imaginei que ele realmente fosse aceitar, mas, pensando bem, parece qu
 
 &gt;[[&quot;Ajudo sim, claro&quot;]]</tw-passagedata><tw-passagedata pid="22" name="Jogar como Liam" tags="" position="2800,525" size="100,100">Meu nome é Liam, tenho 15 anos e vivo em uma pequena vila na Geórgia, cercada pela natureza. Aqui, o tempo parece passar devagar; Aqui, as coisas não acontecem. Nada muda, nada se transforma. Não há nada para fazer além de me perder em pensamentos ou admirar a arquitetura antiga e desgastada das casas. São construções que parecem ter sido feitas para durar mil anos, mas que, no fim, estão só esperando o tempo acabar com elas.
 
-[[clique para continuar-&gt;se instala como uma sombra.]]
+&gt;[[clique para continuar-&gt;se instala como uma sombra.]]
+
+[JavaScript]
+const dadosJogo = engine.state.get(&#39;dadosJogo&#39;)
+if (dadosJogo){
+  dadosJogo.send(JSON.stringify({ &#39;fimDePartida&#39;: true }))
+}
+[continued]
 
 
 
@@ -880,7 +887,6 @@ Olho em volta, a porta precisava de um padrão de cinco letras, eu não tinha e 
 
 </tw-passagedata><tw-passagedata pid="81" name=" 178" tags="" position="4150,3375" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="82" name=" 923" tags="" position="4250,3275" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="83" name=" 625" tags="" position="4050,3475" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="84" name=" 527" tags="" position="4050,3675" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="85" name=" 487" tags="" position="4000,3850" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="86" name=" 253" tags="" position="3950,4000" size="100,100">&gt;[[Ops, escolha errada.]]</tw-passagedata><tw-passagedata pid="87" name="Ops, escolha errada." tags="" position="4625,3575" size="100,100">&gt;[[Jogar como Liam]]
 --
-
 [align center]
 ⚠️️ FINAL TRISTE, VOCÊ FALHOU E ASTROMÉLIA MORREU.⚠️
 
