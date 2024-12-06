@@ -264,15 +264,15 @@ digite a sala de partida: {text input for: &#39;sala&#39;}
 [JavaScript]
 window.setup = {}
 
-setup.loadError = function (oError) {
+window.setup.loadError = function (oError) {
   throw new URIError(
     &#39;The script &#39; + oError.target.src + &quot; didn&#39;t load correctly.&quot;
   )
 }
 
-setup.loadScript = function (url, onloadFunction) {
+window.setup.loadScript = function (url, onloadFunction) {
   const newScript = document.createElement(&#39;script&#39;)
-  newScript.onerror = setup.loadError
+  newScript.onerror = window.setup.loadError
   if (onloadFunction) {
     newScript.onload = onloadFunction
   }
@@ -297,10 +297,15 @@ const iceServers = {
   ]
 }
 
-navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+navigator.mediaDevices
+  .getUserMedia({ video: false, audio: true })
   .then((stream) =&gt; {
-    setup.loadScript(&#39;https://cdn.socket.io/4.8.0/socket.io.min.js&#39;, () =&gt; {
+    window.setup.loadScript(&#39;https://cdn.socket.io/4.8.0/socket.io.min.js&#39;, () =&gt; {
       let socket
+      let localConnection
+      let remoteConnection
+      let dadosJogo
+
       if (window.location.host === &#39;feira-de-jogos.dev.br&#39;) {
         socket = io({ path: &#39;/adcipt20242/socket.io/&#39; })
       } else {
@@ -318,8 +323,11 @@ navigator.mediaDevices.getUserMedia({ video: false, audio: true })
         console.log(jogadores)
         if (jogadores.segundo) {
           if (jogadores.primeiro === socket.id) {
-            const remoteConnection = new RTCPeerConnection(iceServers)
-            const dadosJogo = remoteConnection.createDataChannel(&#39;dadosJogo&#39;, { negotiated: true, id: 0 })
+            remoteConnection = new RTCPeerConnection(iceServers)
+            dadosJogo = remoteConnection.createDataChannel(&#39;dadosJogo&#39;, {
+              negotiated: true,
+              id: 0
+            })
             console.log(&#39;remoteConnection&#39;, remoteConnection)
             console.log(&#39;dadosJogo&#39;, dadosJogo)
 
@@ -332,22 +340,33 @@ navigator.mediaDevices.getUserMedia({ video: false, audio: true })
               console.log(&#39;audio.srcObject&#39;, audio.srcObject)
             }
 
-            stream.getTracks()
+            stream
+              .getTracks()
               .forEach((track) =&gt; remoteConnection.addTrack(track, stream))
 
             socket.on(&#39;offer&#39;, (description) =&gt; {
-              remoteConnection.setRemoteDescription(description)
+              remoteConnection
+                .setRemoteDescription(description)
                 .then(() =&gt; remoteConnection.createAnswer())
                 .then((answer) =&gt; remoteConnection.setLocalDescription(answer))
-                .then(() =&gt; socket.emit(&#39;answer&#39;, sala, remoteConnection.localDescription))
+                .then(() =&gt;
+                  socket.emit(
+                    &#39;answer&#39;,
+                    sala,
+                    remoteConnection.localDescription
+                  )
+                )
             })
 
             socket.on(&#39;candidate&#39;, (candidate) =&gt; {
               remoteConnection.addIceCandidate(candidate)
             })
           } else if (jogadores.segundo === socket.id) {
-            const localConnection = new RTCPeerConnection(iceServers)
-            const dadosJogo = localConnection.createDataChannel(&#39;dadosJogo&#39;, { negotiated: true, id: 0 })
+            localConnection = new RTCPeerConnection(iceServers)
+            dadosJogo = localConnection.createDataChannel(&#39;dadosJogo&#39;, {
+              negotiated: true,
+              id: 0
+            })
             console.log(&#39;localConnection&#39;, localConnection)
             console.log(&#39;dadosJogo&#39;, dadosJogo)
 
@@ -360,12 +379,16 @@ navigator.mediaDevices.getUserMedia({ video: false, audio: true })
               console.log(&#39;audio.srcObject&#39;, audio.srcObject)
             }
 
-            stream.getTracks()
+            stream
+              .getTracks()
               .forEach((track) =&gt; localConnection.addTrack(track, stream))
 
-            localConnection.createOffer()
+            localConnection
+              .createOffer()
               .then((offer) =&gt; localConnection.setLocalDescription(offer))
-              .then(() =&gt; socket.emit(&#39;offer&#39;, sala, localConnection.localDescription))
+              .then(() =&gt;
+                socket.emit(&#39;offer&#39;, sala, localConnection.localDescription)
+              )
 
             socket.on(&#39;answer&#39;, (description) =&gt; {
               localConnection.setRemoteDescription(description)
@@ -374,6 +397,23 @@ navigator.mediaDevices.getUserMedia({ video: false, audio: true })
             socket.on(&#39;candidate&#39;, (candidate) =&gt; {
               localConnection.addIceCandidate(candidate)
             })
+          }
+
+          if (dadosJogo) {
+            dadosJogo.onopen = () =&gt; {
+              console.log(&#39;Conexão de dados aberta!&#39;)
+              engine.state.set(&#39;dadosJogo&#39;, dadosJogo)
+
+              dadosJogo.onmessage = (event) =&gt; {
+                const dados = JSON.parse(event.data)
+                console.log(&#39;dados&#39;, dados)
+
+                if (dados.fimDePartida) {
+                  engine.state.set(&#39;fimDePartida&#39;, dados.fimDePartida)
+                  alert(&#39;Fim de partida!&#39;)
+                }
+              }
+            }
           }
         }
       })
