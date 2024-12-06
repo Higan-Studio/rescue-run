@@ -3,9 +3,8 @@ const cacheName = 'cache-v1.0.0'
 
 // List the files to precache
 const precacheResources = [
-  './capa.png',
+  './imagem logo.png',
   './index.html',
-  './trilha-solo.mp3'
 ]
 
 self.addEventListener('install', (event) => {
