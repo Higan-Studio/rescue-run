@@ -5,7 +5,7 @@ const cacheName = 'cache-v1.0.0'
 const precacheResources = [
   './imagem logo.png',
   './index.html',
-  './door-knocking-and-opening-240831.mp3'
+  './door-knocking-and-opening-240831.mp3',
   './doorbell-223669.mp3'
 ]
 
